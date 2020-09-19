@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatitos</title>
+</head>
+
+<body>
+    <h1>Sunset Kittens</h1>
+    <div class="container">
+
+        <div class="card" data-nombre="artilugia" data-sexo="hembra" data-color="gris">
+            <img src="http://www.placekitten.com/200">
+            <div class="title">
+                <h4>Artilugia</h4>
+            </div>
+        </div>
+
+        <div class="card" data-nombre="boris" data-sexo="indistinto" data-color="rayado">
+            <img src="http://www.placekitten.com/300">
+            <div class="title">
+                <h4>Boris</h4>
+            </div>
+        </div>
+
+        <div class="card" data-nombre="pippin" data-sexo="macho" data-color="melange">
+            <img src="http://www.placekitten.com/400">
+            <div class="title">
+                <h4>Pippin</h4>
+            </div>
+        </div>
+
+        <div class="card" data-nombre="pepo" data-sexo="macho" data-color="melange">
+            <img src="http://www.placekitten.com/500">
+            <div class="title">
+                <h4>Pepo</h4>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Agrega un <form> a tu web con:
+
+Un input type="text" con el label "Nombre"
+Tres button con el label "Colores" y como opciones, colores habituales de gatos.
+Tres input type="radio" con el label "Sexo" y como opciones "hembra", "macho" e "indistinto".-->
+    <div class="contenedor-flex">
+        <div class="contenedor-form">
+            <form action="">
+                <h4>Formulario</h4>
+                <div class="nombre">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Nombre">
+                </div>
+
+                <div class="colores">
+                    <label for="colores">Colores</label>
+                    <button type="button" class="filtro-boton" data-color="gris">Gris</button>
+                    <button type="button" class="filtro-boton" data-color="rayado">Rayado</button>
+                    <button type="button" class="filtro-boton" data-color="melange">Melange</button>
+                    <button type="button" class="filtro-boton" data-color="todos">Todos</button>
+
+                </div>
+                <div class="genero">
+                    <label>Sexo <br>
+                        <input type="radio" class="radio" name="sexo" data-sexo="macho" id="macho"> Macho
+                        <input type="radio" class="radio" name="sexo" data-sexo="hembra" id="hembra"> Hembra
+                        <input type="radio" class="radio" name="sexo" data-sexo="indistinto" id="indistinto"> Indistinto
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

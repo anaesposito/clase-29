@@ -1,0 +1,83 @@
+body {
+  background-image: linear-gradient(90deg, #ffeb68, #ffd770, #ffc583, #ffb69b);
+  font-family: montserrat;
+  color: white;
+}
+h1,
+h4 {
+  text-shadow: 2px 2px rgba(128, 128, 128, 0.562);
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 20px;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  padding: 2px 16px;
+}
+h1 {
+  font-size: 60px;
+}
+button {
+  background-image: linear-gradient(90deg, #ff8b6c, #ff6a95);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 120px;
+}
+
+.contenedor-form {
+  background-color: rgba(255, 69, 140, 0.274);
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+  padding: 40px;
+}
+h4 {
+  font-size: 40px;
+}
+.contenedor-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.nombre,
+.colores {
+  display: flex;
+
+  padding-bottom: 40px;
+}
+#nombre {
+  width: 200px;
+}
+label {
+  font-size: 20px;
+}
+.hidden {
+  display: none;
+}
