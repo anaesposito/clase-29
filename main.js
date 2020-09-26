@@ -68,7 +68,7 @@ const compararInputConTarjeta = (card) => {
 };
 
 const hayAlgunCheckBoxChequeado = () => {
-  for (checkbox of filtroColor) {
+  for (let checkbox of filtroColor) {
     if (checkbox.checked) {
       return true;
     }
@@ -95,7 +95,7 @@ const checkboxCoincideConColor = () => {
 };
 
 const hayAlgunRadioChequeado = () => {
-  for (radio of filtroSexo) {
+  for (let radio of filtroSexo) {
     if (radio.checked) {
       return true;
     }
