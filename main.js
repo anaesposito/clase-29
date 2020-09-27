@@ -12,14 +12,36 @@ const filtroColor = document.querySelectorAll("input[type='checkbox']");
 // ver si el radio chequeado coincide con el sexo de la tarjeta // true / false
 
 const pasaFiltros = (card) => {
-  if (hayAlgunCheckBoxChequeado()) {
-    if (compararCheckboxConTarjeta(card)) {
+  if (hayAlgunRadioChequeado()) {
+    if (hayAlgunRadioChequeado() === card.dataset.sexo) {
       return true;
     } else {
       return false;
     }
+  } else if (hayAlgunCheckBoxChequeado()) {
+    if (hayAlgunCheckBoxChequeado() === card.dataset.color) {
+      return true;
+    } else {
+      return false;
+    }
+  } else if (hayAlgoEscritoEnElInput()) {
+    if (compararInputConTarjeta(card)) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return true;
   }
 };
+
+//   if (hayAlgunCheckBoxChequeado() === card.dataset.color) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
 // me fijo si hay algo escrito en el input,
 // si hay algo escrito en el input me fijo si lo escrito coincide con la tarjeta
 // si coincide con lo escrito en la trajeta retorno true
@@ -43,9 +65,9 @@ const pasaFiltros = (card) => {
 // si el radio chequeado coinciden con el sexo de alguna tarjeta
 // retorno true, sino retorno false
 
-const ocultarTarjeta = (card) => {
+function ocultarTarjeta(card) {
   return card.classList.add("hidden");
-};
+}
 
 const mostrarTarjeta = (card) => {
   return card.classList.remove("hidden");
@@ -72,37 +94,17 @@ const compararInputConTarjeta = (card) => {
 const hayAlgunCheckBoxChequeado = () => {
   for (let checkbox of filtroColor) {
     if (checkbox.checked) {
-      return true;
+      return checkbox.value;
     }
   }
-  return false;
 };
-
-const compararCheckboxConTarjeta = () => {
-  if (card.dataset.nombre === checkbox.value) {
-    console.log(checkbox.value);
-    return true;
-  } else {
-    return false;
-  }
-};
-
-// const checkboxCoincideConColor = () => {
-//   if (hayAlgunCheckBoxChequeado())
-//     if (compararCheckboxConTarjeta(card)) {
-//       return true;
-//     } else {
-//       return false;
-//     }
-// };
 
 const hayAlgunRadioChequeado = () => {
   for (let radio of filtroSexo) {
     if (radio.checked) {
-      return true;
+      return radio.dataset.sexo;
     }
   }
-  return false;
 };
 
 const hayAlgoEscritoEnElInput = () => {
